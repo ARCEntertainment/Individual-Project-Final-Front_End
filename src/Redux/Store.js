@@ -1,8 +1,18 @@
+//? ///////////////////////// STORE Authentification (REDUX) /////////////////////////
+
+
+
+
+// todo IMPORTATION Utils
+// todo __________________________________
 import { configureStore } from "@reduxjs/toolkit";
 import authReducer from "./Reducer/auth-reducer";
 
 
 
+
+//todo STRUCTUR Store Login/Register
+//todo ________________________________
 const store = configureStore({
 
     //* Implentation Reducer 
@@ -16,4 +26,7 @@ const store = configureStore({
 
 
 
+
+//todo EXPORT Store 
+//todo ________________________________
 export default store
