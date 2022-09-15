@@ -1,4 +1,5 @@
 import React from "react";
+import Player from "../../Composant/Music Playert/player";
 
 
 const Music = () => {
@@ -7,7 +8,7 @@ const Music = () => {
     return (
 
         <div>
-            <h2>Music</h2>
+            <Player />
         </div>
     )
 }

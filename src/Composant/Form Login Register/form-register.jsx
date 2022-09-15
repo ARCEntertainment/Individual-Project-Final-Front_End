@@ -11,6 +11,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { registerUser } from "../../Redux/Action/auth-action";
 
+import Style from './form-register-style.module.css'
+
 
 
 
@@ -24,7 +26,7 @@ const FormRegister = () => {
     const {
         handleSubmit,
         register,
-        formState: { error },
+        formState: { errors },
         reset,
 
     } = useForm()
@@ -73,12 +75,12 @@ const FormRegister = () => {
     //! -----------------
     return (
 
-        <form onSubmit={handleSubmit(onSubmit)}>
+        <form onSubmit={handleSubmit(onSubmit)} className={Style.form}>
 
 
             {/* Implentation des Imput */}
             
-            <div>
+            <div className={Style.input}>
                 <label htmlFor="firstname" placeholder="Prenom"></label>
                 <input
                     id="firstname"
@@ -89,7 +91,7 @@ const FormRegister = () => {
 
 
 {/* ------------------------------------------------------------------------- */}
-            <div>
+            <div className={Style.input}>
                 <label htmlFor="lastname" placeholder="Nom"></label>
                 <input
                     id="lastname"
@@ -100,7 +102,7 @@ const FormRegister = () => {
 
 
 {/* ------------------------------------------------------------------------- */}
-            <div>
+            <div className={Style.input}>
                 <label htmlFor="pseudo" placeholder="Pseudo"></label>
                 <input
                     id="pseudo"
@@ -111,7 +113,7 @@ const FormRegister = () => {
 
 
 {/* ------------------------------------------------------------------------- */}
-            <div>
+            <div className={Style.input}>
                 <label htmlFor="email" placeholder="E-mail"></label>
                 <input
                 id="email"
@@ -119,12 +121,12 @@ const FormRegister = () => {
                 {...register('email', {required: true})}
                 />
 
-                {error.mail && <p>Votre E-mail est Incorect veuillez recommancer</p>}
+                {errors.mail && <p>Votre E-mail est Incorect veuillez recommancer</p>}
             </div>
 
 
 {/* ------------------------------------------------------------------------- */}
-            <div>
+            <div className={Style.input}>
                 <label htmlFor="password" placeholder="Mots de Passe"></label>
                 <input
                     id="password"

@@ -1,0 +1,59 @@
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    justify-content: center;
+    gap: 5em;
+
+    padding: 5em;
+}
+
+.card {
+
+    width: 400px;
+    height: 350px;
+    border-radius: 33px;
+    background: linear-gradient(145deg, #484848, #565656);
+    box-shadow:  16px 16px 35px #444444,
+            -16px -16px 35px #5c5c5c;
+}
+
+.imgBox {
+    height: 65%;
+    width: 100%;
+    border-radius: 33px 33px 0px 0px;
+    border: 1px solid red;
+}
+
+h3, h2 {
+    margin: 0;
+    padding: 0;
+    margin-left: 90px;
+}
+
+h3 {
+    font-size: 2em;
+    color: rgba(255, 255, 255, 0.5);
+    margin-top: 30px;
+}
+
+h2 {
+    font-size: 3em;
+    color: rgb(238, 39, 115);
+    text-transform: uppercase;
+
+}
+
+.trackTitle{
+    margin: 10px 0px 0px 10px;
+    color: white;
+    font-size: 1.5em;
+    font-weight: 600;
+}
+
+.artistTitle{
+    margin: 2px 0px 0px 10px;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 1.5em;
+
+    
+}

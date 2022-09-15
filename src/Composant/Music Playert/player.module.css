@@ -1,0 +1,14 @@
+.playerBox{
+    bottom: 0%;
+    position: fixed;
+
+    width: 100vw;
+    border-top: 2px solid rgba(118, 173, 255, 0.5);
+}
+
+.player {
+
+    background-color: rgba(45, 69, 122, 0.205) !important;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}

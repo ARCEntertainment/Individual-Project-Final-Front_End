@@ -1,13 +1,51 @@
 .boxBaner {
     width: 100vw;
-    height: 800px;
-    background-image: url('../../../public/label_bg.jpg');
+    height: 95vh;
+    background-image: url('../../../public/hero-banner.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+
+    border-bottom: 4px solid rgb(104, 190, 211);
 }
 
 h1 {
     margin: 0;
-    color: white;
+    visibility: hidden;
 }
+
+
+.titlePosition {
+    width: 98vw;
+    display: grid;
+    justify-content: right;
+}
+
+
+
+.titreP1 {
+    color: white;
+    font-size: 5em;
+    margin-bottom: 0;
+    margin-top: 5px;
+    text-transform: uppercase;
+    font-weight: 800;
+}
+
+.colorT1 {
+    color: rgb(104, 190, 211);
+    font-size: 60px;
+}
+
+.titreP2 {
+    margin-top: 0;
+    color: rgb(238, 39, 115);
+    font-size: 5.4em;
+    text-transform: uppercase;
+    font-weight: 800;
+
+
+    
+
+}
+

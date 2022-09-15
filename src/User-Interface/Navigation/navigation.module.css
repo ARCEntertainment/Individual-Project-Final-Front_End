@@ -1,0 +1,32 @@
+.container {
+    position: fixed;
+    z-index: 99999;
+    width: 200px;
+    height: 100vh;
+    background: #515151;
+
+    border-right: 2px solid rgb(0, 0, 0);
+    
+    transform: translate(-200px);
+}
+
+.container:hover{
+    transition-duration: 2s;
+    border-right: 2px solid rgb(104, 190, 211);
+
+    box-shadow: 10px 10px 50px rgb(104, 190, 211);
+    transform: translate(0px);
+
+}
+
+.bordure {
+    margin-left: 90%;
+    width: 10px;
+    height: 100vh;
+    border-right: 1px solid #707070;
+    /* background: #505050; */
+    background: rgba(104, 190, 211, 0.6);
+    box-shadow: inset 5px 5px 5px #474747,
+            inset -5px -5px 5px #595959;
+
+}

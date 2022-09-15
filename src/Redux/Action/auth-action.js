@@ -26,7 +26,7 @@ import axios from "axios";
 
 //* Action Structure Login
 // -----------------
-export const login = createAsyncThunk("", 
+export const login = createAsyncThunk("login", 
 
     async (data) => {
 
@@ -41,7 +41,7 @@ export const login = createAsyncThunk("",
 
 //* Action Structure Register
 // -----------------
-export const registerUser = createAsyncThunk("", 
+export const registerUser = createAsyncThunk("register", 
 
     async (data) => {
 
