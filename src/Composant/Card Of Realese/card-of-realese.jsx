@@ -5,7 +5,7 @@ import Style from '../Realese/realese-card.module.css'
 //     <p>artist :{name}</p>
 // )
 
-const CardOfRealese = ({name, link}) => {
+const CardOfRealese = ({name, link, cover}) => {
 
 
     
@@ -19,7 +19,7 @@ const CardOfRealese = ({name, link}) => {
             <div>
                 
                 <div className={Style.card}>
-                    <div className={Style.imgBox}></div>
+                    <div className={Style.imgBox}>{cover}</div>
 
 
                     <p className={Style.trackTitle}>{name}</p>

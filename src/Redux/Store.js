@@ -7,6 +7,7 @@
 // todo __________________________________
 import { configureStore } from "@reduxjs/toolkit";
 import authReducer from "./Reducer/auth-reducer";
+import playerReducer from './Reducer/player-reducer'
 
 
 
@@ -17,7 +18,12 @@ const store = configureStore({
 
     //* Implentation Reducer 
     // -----------------
-    reducer: {auth: authReducer},
+    reducer: 
+        {
+            auth: authReducer,
+            track: playerReducer
+        },
+
 
     //* Implentation devTools 
     // -----------------

@@ -1,8 +1,9 @@
 .playerBox{
     bottom: 0%;
     position: fixed;
+    left: 1.33%;
 
-    width: 100vw;
+    width: 98vw;
     border-top: 2px solid rgba(118, 173, 255, 0.5);
 }
 

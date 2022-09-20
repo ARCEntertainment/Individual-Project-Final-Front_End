@@ -1,0 +1,70 @@
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    position: absolute;
+    left: 5%;
+
+
+    border: 2px solid rgb(255, 0, 111, 0.3);
+    height: 55vh;
+    width: 60vw;
+    margin-top: 15%;
+    
+    background: rgba(100, 149, 208, 0.08);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
+    
+}
+
+.info {
+    position: absolute;
+    right: 5%;
+
+    border: 2px solid rgb(255, 0, 111, 0.3);
+    width: 20vw;
+    height: 75vh;
+    margin-top: 5.5%;
+
+
+    background: rgba(100, 149, 208, 0.08);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
+
+}
+
+.title {
+    position: absolute;
+    margin-left: 50%;
+}
+
+
+.limit {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: center;
+    
+    
+}
+
+
+.searchBar {
+    position: absolute;
+
+    background: rgba(100, 149, 208, 0.08);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* img {
+    
+    position: relative;
+    bottom: 10%;
+    right: 6%;
+    /* width: 1200px; */
+    /* height: 600px; */
+    /* background-image: url('../../../public/ui-search.psd'); */
+    /* background-position: center; */
+    /* background-size: 4300px; */

@@ -10,16 +10,17 @@ import { useForm } from 'react-hook-form';
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { registerUser } from "../../Redux/Action/auth-action";
+import { Link } from 'react-router-dom'
+
 
 import Style from './form-register-style.module.css'
-
 
 
 
 //todo STRUCTUR Composant Login/Register
 //todo ________________________________
 
-const FormRegister = () => {
+const FormLogin = () => {
 
     //* Hook Form Init 
     // -----------------
@@ -71,7 +72,7 @@ const FormRegister = () => {
 
 
 
-    //! STRUCTURE Form-Register
+    //! STRUCTURE Form-Login
     //! -----------------
     return (
 
@@ -79,47 +80,11 @@ const FormRegister = () => {
 
 
             {/* Implentation des Imput */}
-            
-            <div className={Style.input}>
-                <label htmlFor="firstname" ></label>
-                <input placeholder="Prenom" className={Style.input}
-                
-                    id="firstname"
-                    type="text"
-                    {...register('firstname', {required: false})}
-                    />
-            </div>
 
-
-{/* ------------------------------------------------------------------------- */}
-            <div className={Style.input}>
-                <label htmlFor="lastname" ></label>
-                <input placeholder="Nom" className={Style.input}
-
-                    id="lastname"
-                    type="text"
-                    {...register('lastname', {required: false})}
-                    />
-            </div>
-
-
-{/* ------------------------------------------------------------------------- */}
-            <div className={Style.input}>
-                <label htmlFor="pseudo" ></label>
-                <input placeholder="* Pseudo " className={Style.input}
-
-                    id="pseudo"
-                    type="text"
-                    {...register('pseudo', {required: true})}
-                    />
-            </div>
-
-
-{/* ------------------------------------------------------------------------- */}
             <div className={Style.input}>
                 <label htmlFor="email" ></label>
-                <input placeholder="* E-mail" className={Style.input}
-
+                <input placeholder="E-mail" className={Style.input}
+                
                 id="email"
                 type="mail"
                 {...register('email', {required: true})}
@@ -131,8 +96,8 @@ const FormRegister = () => {
 
 {/* ------------------------------------------------------------------------- */}
             <div className={Style.input}>
-                <label htmlFor="password"></label>
-                <input placeholder="* Mots de Passe" className={Style.input}
+                <label htmlFor="password" ></label>
+                <input placeholder="Mots de Passe" className={Style.input}
 
                     id="password"
                     type="password"
@@ -144,12 +109,11 @@ const FormRegister = () => {
 
             {/* Implentation Button Submit */}
             <button className={Style.submit} type="submit">
-                Entrer dans la Famille{' '}
+                Conexion{' '}
             </button>
-
-
-            {/* Info a Respecter */}
-            <h4>Veillez a Respecter les champs obligatoires munis de *</h4>
+            <Link  to={'/register'}>
+                <h5 className={Style.links}>Creer un Compte</h5>
+            </Link>
 
         </form>
     )
@@ -160,4 +124,4 @@ const FormRegister = () => {
 
 //todo EXPORT Form-Register
 //todo ________________________________
-export default FormRegister
+export default FormLogin
