@@ -9,7 +9,7 @@ import { useEffect } from "react";
 import { useForm } from 'react-hook-form';
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { registerUser } from "../../Redux/Action/auth-action";
+import { login } from "../../Redux/Action/auth-action";
 import { Link } from 'react-router-dom'
 
 
@@ -53,7 +53,7 @@ const FormLogin = () => {
     useEffect( () => {
 
         if (isConnected) {
-            navigate('/home')
+            navigate('/social')
         }
 
     }, [isConnected, navigate])
@@ -63,8 +63,9 @@ const FormLogin = () => {
     //* function OnSubmit (recolte donné)
     // -----------------
     const onSubmit = (data) => {
+        console.log('login acant envoie : ', data);
 
-        dispatch(registerUser(data))
+        dispatch(login(data))
         console.log(data);
         reset()
     }
@@ -77,7 +78,7 @@ const FormLogin = () => {
     return (
 
         <form onSubmit={handleSubmit(onSubmit)} className={Style.form}>
-
+            
 
             {/* Implentation des Imput */}
 

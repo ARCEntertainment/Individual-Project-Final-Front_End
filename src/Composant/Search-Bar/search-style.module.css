@@ -42,7 +42,7 @@
     font-weight: 600;
 }
 
-button {
+.SearshBtn {
     text-transform: uppercase;
     font-weight: 600;
 
@@ -58,7 +58,7 @@ button {
             5px 5px 12px #32284c;
 }
 
-button:hover {
+.SearshBtn:hover {
     transition-duration: 0.5s;
     border: 1px solid rgb(255, 0, 111, 0.5);
     color: rgb(255, 0, 111, 0.8);

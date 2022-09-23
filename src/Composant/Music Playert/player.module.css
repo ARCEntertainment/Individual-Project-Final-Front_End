@@ -1,10 +1,18 @@
 .playerBox{
-    bottom: 0%;
+    bottom: -8.5%;
     position: fixed;
     left: 1.33%;
 
     width: 98vw;
     border-top: 2px solid rgba(118, 173, 255, 0.5);
+    transition-duration: 1s;
+    transition-timing-function: ease-in-out;
+}
+
+.playerBox:hover {
+    transition-duration: 1.5s;
+    transition-timing-function: ease-in-out;
+    bottom: 0%;
 }
 
 .player {
@@ -12,4 +20,9 @@
     background-color: rgba(45, 69, 122, 0.205) !important;
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
+    color: white;
 }
+
+
+
+/* //////////////////////////////////////////////////////////// */

@@ -8,10 +8,13 @@
     border-right: 2px solid rgba(0, 0, 0, 0.15);
     
     transform: translate(-175px);
+    transition-duration: 1s;
+    transition-timing-function: ease-in-out;
 }
 
 .container:hover{
-    transition-duration: 2s;
+    transition-duration: 1.5s;
+    transition-timing-function: ease-in-out;
     border-right: 2px solid rgb(104, 190, 211);
 
     box-shadow: 10px 10px 50px rgb(104, 190, 211);
@@ -37,24 +40,56 @@
 
 }
 
+/*? /////////////////////////////////////// Animation Pulse /////////////////////////////////////////// */
+
 .handle {
     position: relative;
-    top: -0.8em;
+    top: -0.95em;
     right: 2.3em;
     width: 30px;
     height: 30px;
     border-radius: 50%;
     border-radius: 50px;
     background: rgba(104, 190, 211, 0.2);
-    box-shadow: inset -2px 2px 4px #3e3e3e,
-            inset 2px -2px 4px #626262;
+    border: 1px solid rgb(247, 120, 168) ;
+    box-shadow: 2px 2px 30px rgb(238, 39, 115),
+                inset 2px 2px 15px rgb(238, 39, 115);
+
+    animation: blink linear infinite 2.5s;
+}
+
+@keyframes blink {
+    0% {
+        -webkit-transform: scale(0.9);
+        transform: scale(0.9);
+        opacity: 1;
+    }
+    25%{
+        -webkit-transform: scale(0.8);
+        transform: scale(0.8);
+    }
+    50%{
+        -webkit-transform: scale(0.7);
+        transform: scale(0.7);
+        opacity: 0.5;
+    }
+    75% {
+        -webkit-transform: scale(0.8);
+        transform: scale(0.8);
+    }
+    100% {
+        -webkit-transform: scale(0.9);
+        transform: scale(0.9);
+        opacity: 1;
+    }
+
 }
 
 .handle:hover {
-    border: 1px solid rgb(244, 67, 135) ;
-    box-shadow: inset 2px 2px 15px rgb(238, 39, 115);
     cursor: pointer;
 }
+
+
 
 .bordure {
     position: relative;
@@ -76,7 +111,7 @@
     flex-direction: column;
 
     justify-content: center;
-    align-items: left;
+    align-items: center;
 
     width: 150px;
     height: 100%;
@@ -84,11 +119,11 @@
 
 }
 
-ul {
+.nav {
     list-style: none;
 }
 
-li {
+.link {
     text-decoration: none;
     color: rgba(240, 248, 255, 0.7);
     height: 6em;
@@ -96,10 +131,39 @@ li {
     text-transform: uppercase;
     font-size: 1rem;
     font-weight: 700;
+
+    margin-right: 30px;
+
+
     
 }
 
-li:hover {
+.logout {
+    position: absolute;
+    top: 1%;
+
+    background: none;
+    border: 1px solid rgb(238, 39, 115, 0.5);
+
+    color: rgb(238, 39, 115, 0.5); 
+    margin: 0 30px 0 0;
+    font-size: 1.5em;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: 1s;
+    transition-timing-function: ease-in-out;
+}
+
+.logout:hover {
+    transition: 1s;
+    transition-timing-function: ease-in-out;
+    border:1px solid rgb(238, 39, 115, 1);
+    color: rgb(238, 39, 115, 1); 
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+.link:hover {
     color: rgb(238, 39, 115);
     text-decoration: underline ;
 }

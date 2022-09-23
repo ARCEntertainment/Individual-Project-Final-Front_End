@@ -13,7 +13,7 @@ const Login = () => {
             <Navigation />
             <p className={Style.title}>Login</p>
             <div className={Style.container}>
-            
+                <p className={Style.membre}>Pour utiliser les outils <span className={Style.membreColor}>"Social"</span> il vous faut un acces Membre</p>
                 <FormLogin />
                 
             

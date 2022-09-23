@@ -1,0 +1,15 @@
+.limit {
+    margin: 0 auto;
+
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    width: 90vw;
+    height: 50vh;
+
+    font-size: 2em;
+    color: white;
+    font-weight: 600;
+}

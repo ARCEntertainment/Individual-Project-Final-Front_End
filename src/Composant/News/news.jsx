@@ -10,8 +10,8 @@ const News = (props) => {
                 
 
                 {/* Contenaire des Element */}
+                <h2>News / Event</h2>
                 <div className={Style.card}>
-                    <h2>News / Event</h2>
 
 
                     {/* Element News*/}

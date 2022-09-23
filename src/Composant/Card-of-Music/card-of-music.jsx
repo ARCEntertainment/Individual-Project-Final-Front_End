@@ -13,6 +13,11 @@ const CardOfMusic = ({name, info, genre, urlTrack, link, cover}) => {
 
     const dispatch = useDispatch()
 
+    const onSelectCard = () => {
+
+        dispatch(setTrack({name, info, genre, urlTrack, link, cover}))
+    }
+
 
     return (
 
@@ -27,13 +32,18 @@ const CardOfMusic = ({name, info, genre, urlTrack, link, cover}) => {
 
             <div className={Style.limit}>
                 
-                <div className={Style.card}>
+                <div className={Style.card}
+                    onClick={ onSelectCard }
+                >
 
                     
-                    <div className={Style.imgBox}></div>
+                    {/* <div className={Style.imgBox}></div> */}
 
 
-                    <div className={Style.cover} onClick={dispatch(setTrack({name, info, genre, urlTrack, link, cover}))}>{cover}</div>
+                    <div className={Style.cover}>
+                        <div className={Style.play}></div>
+                        <img src={cover} alt="img" />
+                    </div> 
 
                     {/* {link.map( artist => <p className={Style.artistTitle} key={artist.artistId._id}>{artist.artistId.name}</p>)} */}
                 </div>

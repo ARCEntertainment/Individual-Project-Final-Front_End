@@ -7,6 +7,7 @@ import Style from './display.module.css'
 import { useState } from "react";
 import CardOfMusic from "../Card-of-Music/card-of-music";
 import { useSelector } from "react-redux";
+import { useEffect } from "react";
 
 
 
@@ -16,25 +17,20 @@ import { useSelector } from "react-redux";
 const Display = () => {
 
     const [musics, setmusics] = useState([])
-    const [search, setSearch] = useState('')
+    const [searchFind, setSearchFind] = useState('')
 
     const currentTrackName = useSelector((state) => {return state.track.currentTrackName})
     const currentTrackInfo = useSelector((state) => {return state.track.currentTrackInfo})
     const currentTrackGenre = useSelector((state) => {return state.track.currentTrackGenre})
 
 
-    const currentArtistName = useSelector((state) => {return state.track.currentArtistName})
-    const currentArtistLand = useSelector((state) => {return state.track.currentArtistLand})
-    const currentArtistbio = useSelector((state) => {return state.track.currentArtistbio})
+    const currentLink = useSelector((state) => {return state.track.currentTrackLink})
 
 
 
+    useEffect(() => {
 
-    const MusicList = (search) => {
-
-        setSearch(search)
-
-            axios
+        axios
             .get(`http://localhost:8580/api/music`)
     
             .then((res) => {
@@ -44,8 +40,16 @@ const Display = () => {
             })
     
             .catch(err => console.log(err))
-    
-        }
+
+    }, [searchFind])
+
+    const MusicList = (search) => {
+
+        setSearchFind(search)
+
+        
+
+    }
 
     
     
@@ -64,27 +68,33 @@ const Display = () => {
             />
 
             <div className={Style.info}>
-                <p>Music Details</p>
+                <p className={Style.title2}>Music Details</p>
                 
-                <p>Titre</p>
-                <p>{currentTrackName}</p>
+                <p className={Style.subTitle}>Titre</p>
+                <p className={Style.detail}>{currentTrackName}</p>
 
-                <p>Info</p>
-                <p>{currentTrackInfo}</p>
+                <p className={Style.subTitle}>Info</p>
+                <p className={Style.detail}>{currentTrackInfo}</p>
 
-                <p>Genre</p>
-                <p>{currentTrackGenre}</p>
+                <p className={Style.subTitle}>Genre</p>
+                <p className={Style.detail}>{currentTrackGenre}</p>
 
 
 
-                <p>Artist</p>
-                <p>{currentArtistName}</p>
+                <p className={Style.subTitle}>Artist</p>
+                {currentLink.map(link => 
 
-                <p>Origin</p>
-                <p>{currentArtistLand}</p>
+                    <div>
+                        <p className={Style.detail}>{link.artistId.name}</p>
 
-                <p>Biographie</p>
-                <p>{currentArtistbio}</p>               
+                        <p className={Style.subTitle}>Origin</p>
+                        <p className={Style.detail}>{link.artistId.land}</p>
+
+                        <p className={Style.subTitle}>Biographie</p>
+                        <p className={Style.detail}>{link.artistId.bio}</p> 
+                    </div>
+                    
+                    )}
                 
 
             </div>
@@ -92,10 +102,10 @@ const Display = () => {
             
             <div className={Style.container}>
                 <p className={Style.title}>Music List</p>
-                {(search === '') ? 
+                {(searchFind === '') ? 
                     musics.map( music => <CardOfMusic key={music._id} {...music} />) :
 
-                    musics.filter(music => music.genre.toUpperCase() === search.toUpperCase() || music.link.find(l => l.artistId.name.toUpperCase().includes(search.toUpperCase())) || music.name.toUpperCase() === search.toUpperCase() ).map( music => <CardOfMusic key={music._id} {...music} />)
+                    musics.filter(music => music.genre.toUpperCase() === searchFind.toUpperCase() || music.link.find(l => l.artistId.name.toUpperCase().includes(searchFind.toUpperCase())) || music.name.toUpperCase() === searchFind.toUpperCase() ).map( music => <CardOfMusic key={music._id} {...music} />)
                     
                     
                     }

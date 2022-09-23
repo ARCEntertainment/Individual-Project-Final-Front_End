@@ -24,9 +24,7 @@ const initialState =  {
     currentTrackInfo :'',
     currentTrackGenre: '',
 
-    currentArtistName : '',
-    currentArtistLand : '',
-    currentArtistbio : ''
+    currentTrackLink : []
 
     // Info link
     // ------------------
@@ -48,9 +46,7 @@ const playerReducer = createReducer(initialState, (builder) => {
             state.currentTrackInfo= action.payload.info
             state.currentTrackGenre= action.payload.genre
 
-            state.currentArtistName= action.payload.link.name
-            state.currentArtistLand= action.payload.link.land
-            state.currentArtistbio= action.payload.link.bio
+            state.currentTrackLink= action.payload.link
         })
 
         .addCase(resetTrack, (state, action) => {

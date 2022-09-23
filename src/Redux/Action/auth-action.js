@@ -32,7 +32,7 @@ export const login = createAsyncThunk("login",
 
         //* => Route LOGIN:    post
         // -----------------
-        const response = axios.post('http://localhost:8580/api/auth/login/', data)
+        const response = await axios.post('http://localhost:8580/api/auth/login/', data)
 
         return response.data.token
     }
@@ -47,14 +47,14 @@ export const registerUser = createAsyncThunk("register",
 
         //* => Route REGISTER: post
         // -----------------
-        const response = axios.post('http://localhost:8580/api/auth/register/', data)
+        const response = await axios.post('http://localhost:8580/api/auth/register/', data)
 
         return response.data.token
     }
 )
 
 
-export const logout = createAction()
+export const logout = createAction("logout")
 
 
 //todo ______________________________________________________________________

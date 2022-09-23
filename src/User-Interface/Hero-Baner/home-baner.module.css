@@ -30,22 +30,72 @@ h1 {
     margin-top: 5px;
     text-transform: uppercase;
     font-weight: 800;
+    
 }
 
 .colorT1 {
     color: rgb(104, 190, 211);
-    font-size: 60px;
+    font-size: 55px;
 }
+
+/*? ////////////////////////////////////////// Logo Animation ///////////////////////////////////////////////// */
 
 .titreP2 {
+    text-align: right;
+    font-family: 'Vibur';
     margin-top: 0;
-    color: rgb(238, 39, 115);
-    font-size: 5.4em;
-    text-transform: uppercase;
+    color: #fee;
+    font-size: 5em;
     font-weight: 800;
-
-
+    text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em rgb(238, 39, 115), 0 0 0.5em rgb(238, 39, 115), 0 0 0.1em rgb(238, 39, 115), 0 10px 3px #000;
     
-
 }
+
+.titreP2 span{
+    animation: blink linear infinite 4s;
+}
+.titreP2 span:nth-of-type(1){
+    animation: blink linear infinite 10s;
+}
+
+.titreP2 span:nth-of-type(3){
+    animation: blink linear infinite 15s;
+}
+
+
+@keyframes blink {
+    78% {
+        color: inherit;
+        text-shadow: inherit;
+    }
+    79%{
+        color: #333;
+    }
+    80% {
+        
+        text-shadow: none;
+    }
+    81% {
+        color: inherit;
+        text-shadow: inherit;
+    }
+    82% {
+        color: #333;
+        text-shadow: none;
+    }
+    83% {
+        color: inherit;
+        text-shadow: inherit;
+    }
+    92% {
+        color: #333;
+        text-shadow: none;
+    }
+    92.5% {
+        color: inherit;
+        text-shadow: inherit;
+    }
+}
+
+
 

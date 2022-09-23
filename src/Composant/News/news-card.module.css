@@ -4,40 +4,45 @@
     justify-content: center;
 
     padding: 5em;
+    margin-top: 10em;
 }
 
 
 .card {
     display: grid;
-    grid-template-columns: auto auto auto auto;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+    gap: 5em;
 
     width: 1700px;
     height: 600px;
     border: 1px solid #5c5c5c;
     border-radius: 33px;
-    background: linear-gradient(145deg, #484848, #565656);
+    background: linear-gradient(145deg, #505050, #565656);
     box-shadow:  10px 10px 25px #444444,
             -10px -10px 25px #5c5c5c;
 }
 
 .news {
+    margin-left: 40px;
     width: 600px;
     height: 350px;
     margin-top: 100px;
 
     border-radius: 10px;
-    background: #505050;
-    box-shadow: inset 12px 12px 37px #444444,
-            inset -12px -12px 37px #5c5c5c;
+    background: #4e4f50;
+    box-shadow: inset 9px 9px 7px #444444,
+            inset -9px 9px 7px #5c5c5c;
 }
 
 .event {
+    margin-right: 40px;
     width: 600px;
     height: 350px;
     margin-top: 100px;
 
     border-radius: 10px;
-    background: #505050;
-    box-shadow: inset 12px 12px 37px #444444,
-            inset -12px -12px 37px #5c5c5c;
+    background: #4e4f50;
+    box-shadow: inset 9px 9px 7px #444444,
+            inset -9px -9px 7px #5c5c5c;
 }

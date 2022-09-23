@@ -1,10 +1,23 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom'
+import { useDispatch, useSelector } from 'react-redux'
+import { NavLink, useNavigate } from 'react-router-dom'
 import Style from './navigation.module.css'
+import { logout } from '../../Redux/Action/auth-action'
 
 
 const Navigation = () => {
 
+    const conexion = useSelector(state => state.auth.isConnected)
+
+    const dispatch = useDispatch()
+    const navigate = useNavigate()
+
+    const onLogout = () => {
+
+        dispatch(logout())
+        navigate('/home')
+        
+    }
 
 
     return (
@@ -14,29 +27,32 @@ const Navigation = () => {
 
                 <ul className={Style.nav}>
 
+                    {conexion && <button onClick={onLogout} className={Style.logout}>Logout</button>}
+
                     <NavLink to={"/home"}> 
-                        <li>Home</li>
+                        <li className={Style.link}>Home</li>
                     </NavLink>
 
                     <NavLink to={"/label"}> 
-                        <li>label</li>
+                        <li className={Style.link}>label</li>
                     </NavLink>
 
                     <NavLink to={"/music"}> 
-                        <li>music</li>
+                        <li className={Style.link}>music</li>
                     </NavLink>
 
                     <NavLink to={"/social"}> 
-                        <li>social</li>
+                        <li className={Style.link}>social</li>
                     </NavLink>
 
                     <NavLink to={"/contact"}> 
-                        <li>Contact</li>
+                        <li className={Style.link}>Contact</li>
                     </NavLink>
-
+                    {!conexion && 
                     <NavLink to={"/conexion"}> 
-                        <li>Conexion</li>
-                    </NavLink>
+                        <li className={Style.link}>Conexion</li>
+                    </NavLink>}
+
 
                 </ul>
 

@@ -8,7 +8,7 @@ import  Style  from './search-style.module.css'
 const Search = ({placeholder, onSearch}) => {
 
 
-    const  [search, setSearch]  =useState('') 
+    const  [search, setSearch]  = useState('') 
 
 
     const handlClick = () => {
@@ -32,7 +32,7 @@ const Search = ({placeholder, onSearch}) => {
                     placeholder={placeholder}
                 />
 
-                <button onClick={handlClick}>Search</button>
+                <button onClick={handlClick} className={Style.SearshBtn}>Search</button>
             </div>
 
             
