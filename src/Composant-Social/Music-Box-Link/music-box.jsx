@@ -9,7 +9,7 @@ const MusicBox = () => {
 
         <div className={style.limit}>
                 <p>Reseau Social pour Artist "Music-Box"</p>
-                <p>Par Donovan Duperquoi</p>
+                <p>Par Donovan Duperrois</p>
                 <div className={style.card}>
 
                 </div>

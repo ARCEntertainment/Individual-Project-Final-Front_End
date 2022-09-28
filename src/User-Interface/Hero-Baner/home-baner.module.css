@@ -30,12 +30,30 @@ h1 {
     margin-top: 5px;
     text-transform: uppercase;
     font-weight: 800;
+    animation: text linear 1s;
     
 }
 
 .colorT1 {
     color: rgb(104, 190, 211);
     font-size: 55px;
+    animation: text linear 1.5s;
+}
+
+@keyframes text {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0;
+    }
+    75% { 
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
+
 }
 
 /*? ////////////////////////////////////////// Logo Animation ///////////////////////////////////////////////// */
@@ -44,7 +62,7 @@ h1 {
     text-align: right;
     font-family: 'Vibur';
     margin-top: 0;
-    color: #fee;
+    color:#fee ;
     font-size: 5em;
     font-weight: 800;
     text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em rgb(238, 39, 115), 0 0 0.5em rgb(238, 39, 115), 0 0 0.1em rgb(238, 39, 115), 0 10px 3px #000;
@@ -97,5 +115,44 @@ h1 {
     }
 }
 
+/*? ////////////////////////////////////////// Line Animation ///////////////////////////////////////////////// */
 
+.lineAnimation {
+    position: relative;
+    top: 10%;
+    left: -100%;
+    width: 500px;
+    height: 5px;
+    background: linear-gradient(rgb(255, 255, 255), rgb(238, 39, 115)) ;
+    box-shadow: 0 5px 27px rgb(238, 39, 115), 0 -5px 27px rgb(238, 39, 115);
+    animation: line linear 1.5s;
 
+}
+
+@keyframes line {
+    0% {
+        width: 10px;
+        left: 100%;
+        opacity: 0;
+    }
+    20% {
+        width: 1000px;
+        left: 50%;
+        opacity: 1;
+    }
+    40% {
+        width: 100vw;
+        left: 0%;
+        opacity: 1;
+    }
+    80% {
+        width: 100vw;
+        left: 0%;
+        opacity: 1;
+    }
+    100% {
+        width: 70vw;
+        left: 0%;
+        opacity: 0;
+    }
+}
